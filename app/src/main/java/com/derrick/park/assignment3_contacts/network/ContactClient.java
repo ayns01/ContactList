@@ -26,5 +26,4 @@ public class ContactClient {
         System.out.println(contacts);
         return contacts;
     }
-
 }

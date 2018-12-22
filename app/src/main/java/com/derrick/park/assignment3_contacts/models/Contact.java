@@ -20,6 +20,11 @@ public class Contact {
     @Expose
     private String cell;
 
+    public Contact(Name name, String cell) {
+        this.name = name;
+        this.cell = cell;
+    }
+
     public String getGender() {
         return gender;
     }
@@ -48,13 +53,18 @@ public class Contact {
     /**
      * Name {first: , last: }
      */
-    class Name {
+    public static class Name {
         @SerializedName("first")
         @Expose
         private String first;
         @SerializedName("last")
         @Expose
         private String last;
+
+        public Name(String first, String last) {
+            this.first = first;
+            this.last = last;
+        }
 
         public String getFirst() {
             return first;
